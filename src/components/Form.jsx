@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ToDoItem from "./ToDoItem";
 
 function Form(){
     let [newToDo,setNewToDo] = useState("");
@@ -23,7 +24,7 @@ function Form(){
 		<div>
 			<ul>
 			<li>An Item</li>
-            {items.map(i => (<li>{i}</li>))}
+            {items.map(i => <ToDoItem text={i}/>)}
 			</ul>
 		</div>
     </div>
