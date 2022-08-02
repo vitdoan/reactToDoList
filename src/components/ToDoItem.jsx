@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 function ToDoItem(props){
-    let [isCrossed,setCross] = useState(false);
-
-    function crossText(){
-        setCross(!isCrossed);
-    }
-
-    return <li onClick={crossText} style={{textDecoration: isCrossed? "line-through" : "none"}}>{props.text}</li>;
+    return <li onClick={props.removeText}>{props.text}</li>;
 } 
 
 export default ToDoItem;
